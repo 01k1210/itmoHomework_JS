@@ -9,14 +9,11 @@
 let count = 90 // в значение переменной вводим количество верных ответов
 if(count <= 100 && count >= 90 ){
     console.log('отлично');
-}
-if(count <= 89 && count >= 60 ){
+} else if(count <= 89 && count >= 60 ){
     console.log('хорошо');
-}
-if(count <= 59 && count >= 40 ){
+} else if(count <= 59 && count >= 40 ){
     console.log('удовлетворительно');
-}
-else{
+}else{
     console.log('попробуйте еще раз');
 }
 
