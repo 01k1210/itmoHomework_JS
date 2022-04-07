@@ -17,7 +17,11 @@ while(true){
 
     if(a === null)  break;
     a = +a;
-    if ((a === 1) || (a > 20 && a % 10 === 1)){
+    if (a % 100 >= 11 && a % 100 <=14){
+        b = "товаров"
+        console.log(a + " " + b);
+    }
+    else if ((a === 1) || (a > 20 && a % 10 === 1)){
     b = "товар"
     console.log(a + " " + b);
     } else if ((a >= 2 && a <= 4) || (a > 20 && a % 10 >= 2 && a % 10 <= 4)){
