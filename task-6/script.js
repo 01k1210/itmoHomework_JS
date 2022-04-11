@@ -40,9 +40,8 @@ let temperatures = [
     [111, 313, 351, 314],
     [134, 111, 452],
 ];
+
+let a = function(temp){return temp >500};
 for(i of temperatures){
- let newTemp = i.some(function(temp){return temp > 500});
-}
-if (newTemp = true){
-  console.log("температура поднималась выше 500")
+ console.log(i.some(a));
 }
