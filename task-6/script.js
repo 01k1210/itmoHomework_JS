@@ -9,19 +9,8 @@ let numbers = [
     [4, 89, 45, 12, 0, -33, 90],
     [5, -12, 87, 67, -22, 111]
 ];
-let a = [];
-for(k of numbers){
-  for(i of k){
-    a.push(i);
-  };
-};
-function sortTemps(a,b){
-  if ( a === b) return 0;
-  if( a < b) return - 1;
-  return 1;
-};
-a.sort(sortTemps);
-console.log(a);
+numbers.sort(function(a,b){return a.length - b.length})
+console.log(numbers);
 
 // Задача 2 на методы sort() и Math.random()
 // Необходимо случайным образом изменить порядок элементов в массиве.
@@ -51,12 +40,9 @@ let temperatures = [
     [111, 313, 351, 314],
     [134, 111, 452],
 ];
-
-let newTemp = [];
-for(t of temperatures){
-  for(i of t){
-    newTemp.push(i)
-  };
-};
-let newTemp1 = newTemp.some(function(temp){return temp > 500});
-console.log(newTemp1);
+for(i of temperatures){
+ let newTemp = i.some(function(temp){return temp > 500});
+}
+if (newTemp = true){
+  console.log("температура поднималась выше 500")
+}
