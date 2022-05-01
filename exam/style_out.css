@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+}
+body{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.out_wrap{
+    padding: 10px 0;
+}
+.inner{
+    width: 800px;
+    border: 1px solid rgba(0, 0, 255, .2);
+    box-shadow: 18px 23px 2px 1px rgba(0, 0, 255, .2);
+    margin-bottom: 40px;
+    padding: 10px;
+    cursor: pointer;
+}
+.inner p {
+    text-align: left;
+}
+
+.checked{
+    background-color: aquamarine;
+}
+
+.clear{
+position: fixed;
+top: 10px;
+left: 10px;
+background-color: rgba(0, 0, 255, .2);
+cursor: pointer;
+}
+
+.clear_Us{
+    position: fixed;
+    top: 40px;
+    left: 10px;
+    background-color: rgba(0, 0, 255, .2);
+    cursor: pointer; 
+}
+
+.button{
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 7px;
+    font-weight: 600;
+    cursor: pointer;
+}
