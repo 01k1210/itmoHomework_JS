@@ -4,6 +4,7 @@ let prises = {
     book: "Книга",
  };
 
+let n = parseInt(prompt("Введите число больше 3!, для генерации таблици"))
 function generateTable(n){
     if(n < 3) return;
     let wrap = document.querySelector(".table__wrap_2");
@@ -42,17 +43,18 @@ table.addEventListener("click", listener);
 function listener(event){
     click--;
     alert(`У вас осталось ${click} попыток`);
+
+    if(event.target.hasAttribute("prises")){
+        event.target.innerHTML = event.target.getAttribute("prises")
+        alert("Вы выйграли, перезагрузите страничку")
+        table.removeEventListener("click", listener)
+    }
 if(click === 0){
     alert("Игра закончена, перезагрузите страничку!")
-    table.removeEventListener("click", listener)
-}
-if(event.target.hasAttribute("prises")){
-    event.target.innerHTML = event.target.getAttribute("prises")
-    alert("Вы выйграли, перезагрузите страничку")
     table.removeEventListener("click", listener)
 }
 }
 }
 
-generateTable(4)
+generateTable(n)
 
