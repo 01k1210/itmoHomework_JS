@@ -28,20 +28,31 @@ function generateTable(n){
         randomCell.setAttribute("prises", Object.values(prises)[i]);
     }
     let click = 6;
-    table.addEventListener('click',function(event){
-        click--
-        console.log(`у вас осталось ${click} попыток`);
-        if(click === 0){
-            console.log("Игра закончена, перезагрузите страничку!")
-        }
-        else if(event.target.hasAttribute("prises")){
-            event.target.innerHTML = event.target.getAttribute("prises")
-            console.log("Вы выйграли, перезагрузите страничку!");
-        }; 
-    })
+// table.onclick = clikUs;
+// function clikUs(event){
+//     click--;
+//     console.log(`У вас осталось ${click} попыток`);
+//     if(click === 0){
+//         console.log("Игра закончена, перезагрузите страничку!")
+//         table.onclick = null;
+//     }
+// }
+
+table.addEventListener("click", listener);
+function listener(event){
+    click--;
+    alert(`У вас осталось ${click} попыток`);
+if(click === 0){
+    alert("Игра закончена, перезагрузите страничку!")
+    table.removeEventListener("click", listener)
+}
+if(event.target.hasAttribute("prises")){
+    event.target.innerHTML = event.target.getAttribute("prises")
+    alert("Вы выйграли, перезагрузите страничку")
+    table.removeEventListener("click", listener)
+}
+}
 }
 
-
 generateTable(4)
-
 

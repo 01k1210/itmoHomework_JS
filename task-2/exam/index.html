@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список задач</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="" name="tasks" novalidate>
+        <span></span>
+        <h1>Добавление задачи</h1>
+        <div>
+            <label for="name">Название задачи</label>
+            <input  autocomplete="off" required minlength="3" maxlength="20" type="text" name="name" placeholder="Введите название задачи">
+            <span></span>
+        </div>
+
+        <div>
+            <p>Название задачи</p>
+            <textarea name="description" cols="30" rows="10" placeholder="Введите описание задачи" ></textarea>
+        </div>
+
+        <div>
+            <label for="date">Срок выволнения задачи</label>
+            <input required id="biday" type="date" name="date">
+            <span></span>
+        </div>
+        
+        <button class="add_Us">Добавить участника</button>
+        <div class="wrap_Us"></div>
+
+        <div>
+            <button type="submit">Добавить задачу</button>
+            <a class="link" href="out.html" target="_blank">Открыть список задач</a>
+        </div>
+
+    </form>
+    <script src="form.js"></script>
+</body>
+</html>

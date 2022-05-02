@@ -32,13 +32,16 @@ document.forms.tasks.addEventListener('submit',function(event){
     for(let user of users){
         usersVal.push(user.value);
     }
+    // this.elements.users.value = "";
+    
     let tasksInfo = {name, description, date, usersVal};
     let tasksPush = localStorage.getItem("tasks");
     let idVal = 1;
     if(tasksPush !== null){
         tasksPush = JSON.parse(tasksPush);
-        // idVal = tasksPush[tasksPush.length -1].id + 1;
+        idVal = tasksPush[tasksPush.length -1].id + 1;
     }  else tasksPush = [];
+
     tasksInfo.id = idVal;
     tasksPush.push(tasksInfo);
     localStorage.setItem("tasks", JSON.stringify(tasksPush));

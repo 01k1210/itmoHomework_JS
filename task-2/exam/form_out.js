@@ -28,6 +28,8 @@ for(let i of tasksPush){
 document.querySelector(".clear_Us").addEventListener('click', function(){
     let del = document.getElementsByClassName("checked");
     for(let i of del){
+        // for перебрать tasksPush от последнего элемента к первому
+        console.log(tasksPush)
             for(let j = tasksPush.length-1; j >= 0; j--){
                 if(i.id == tasksPush[j].id){
                     i.remove();
@@ -37,4 +39,9 @@ document.querySelector(".clear_Us").addEventListener('click', function(){
 
     }
     localStorage.setItem("tasks", JSON.stringify(tasksPush));
+})
+
+document.querySelector(".clear").addEventListener('click', function(){
+    localStorage.clear();
+    
 })
